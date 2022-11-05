@@ -6,6 +6,11 @@ import { OrderType } from '../types/order.t';
 export interface IBotExchange {
 
     /**
+     * ## Exchange Prices
+     */
+    prices: any;
+
+    /**
      * ## Watches market asset prices.
      * 
      * These exchange function will begin to watch asste/assets price change.
