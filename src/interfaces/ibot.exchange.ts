@@ -1,10 +1,10 @@
 import { OrderType } from '../types/order.t';
-import { EventEmitter } from 'node:events';
+import { BotEvents } from '../types/events.t';
 
 /**
  * Exchange interface for BOT
  */
-export interface IBotExchange extends EventEmitter {
+export interface IBotExchange {
 
     /**
      * ## Exchange Prices
@@ -46,4 +46,7 @@ export interface IBotExchange extends EventEmitter {
     stop_loss(product: string, amount: string): Promise<boolean>,
 
     stop_watching_prices(): void,
+
+
+    on(evt: BotEvents, callback: (value?: any) => void): void,
 }
