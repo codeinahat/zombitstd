@@ -1,10 +1,13 @@
 {
   "name": "@codeinahat/zombitstd",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "Zombit Standard LIB",
   "main": "_build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc",
+    "build": "rm ./dis/* -rfv & tsc && node _build.js",
+    "p": "cd ./dis && npm publish --access public"
   },
   "repository": {
     "type": "git",
