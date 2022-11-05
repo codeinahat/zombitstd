@@ -48,5 +48,5 @@ export interface IBotExchange {
     stop_watching_prices(): void,
 
 
-    on(evt: BotEvents, callback: (value?: any) => void): void,
+    onEvent(evt: BotEvents, callback: (...args: any) => void): void,
 }

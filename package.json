@@ -1,6 +1,6 @@
 {
   "name": "@codeinahat/zombitstd",
-  "version": "0.3.0",
+  "version": "0.4.2",
   "description": "Zombit Standard LIB",
   "main": "_build.js",
   "scripts": {
