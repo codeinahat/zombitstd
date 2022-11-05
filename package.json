@@ -1,13 +1,14 @@
 {
   "name": "@codeinahat/zombitstd",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Zombit Standard LIB",
   "main": "_build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc",
-    "build": "rm ./dis/* -rfv & tsc && node _build.js",
-    "p": "cd ./dis && npm publish --access public"
+    "build": "node _build.js",
+    "p": "npm run build && cd ./dis && npm publish --access public",
+    "p:tag": "npm run build && cd ./dis && npm publis --access public --tag $npm_config_tag"
   },
   "repository": {
     "type": "git",
