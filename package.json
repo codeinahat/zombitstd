@@ -1,0 +1,30 @@
+{
+  "name": "@codeinahat/zombitstd",
+  "version": "0.0.0",
+  "description": "Zombit Standard LIB",
+  "main": "_build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeinahat/zombitstd.git"
+  },
+  "keywords": [
+    "Zombit",
+    "Crypto",
+    "Trading",
+    "Bot",
+    "Standard"
+  ],
+  "author": "Richard Chapman Gomez",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/codeinahat/zombitstd/issues"
+  },
+  "homepage": "https://github.com/codeinahat/zombitstd#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "typescript": "^4.8.4"
+  }
+}
