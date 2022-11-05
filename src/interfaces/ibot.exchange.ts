@@ -1,9 +1,10 @@
 import { OrderType } from '../types/order.t';
+import { EventEmitter } from 'node:events';
 
 /**
  * Exchange interface for BOT
  */
-export interface IBotExchange {
+export interface IBotExchange extends EventEmitter {
 
     /**
      * ## Exchange Prices
@@ -34,7 +35,7 @@ export interface IBotExchange {
      * ```
      * @return Array of Assets and Prices or an Asset and Price
      */
-    watch_prices(interval: number, id?: string): Promise<any[] | any>,
+    watch_prices(interval: number, id?: string): number,
 
 
     buy_order(type: OrderType, product: string, amount: string, currency?: string): Promise<boolean>,
@@ -43,4 +44,6 @@ export interface IBotExchange {
     sell_order(type: OrderType, product: string, amount: string, currency?: string): Promise<boolean>,
 
     stop_loss(product: string, amount: string): Promise<boolean>,
+
+    stop_watching_prices(): void,
 }
